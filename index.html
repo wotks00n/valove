@@ -10,16 +10,13 @@
       margin: 0;
       padding: 20px;
       background: #fefefe;
-      /* Zapewniamy miejsce na stopkę */
       padding-bottom: 60px;
     }
-    /* Każda "strona" jako kontener */
     .page {
       display: none;
       max-width: 600px;
       margin: 0 auto;
     }
-    /* Aktywna strona */
     .active {
       display: block;
     }
@@ -29,12 +26,10 @@
       margin: 10px;
       cursor: pointer;
     }
-    /* Styl dla tłumaczenia (mniejsza czcionka) */
     .small-text {
       font-size: 0.6em;
       color: #555;
     }
-    /* Przycisk "cofnij" – umieszczony w prawym dolnym rogu */
     .back-button {
       position: fixed;
       bottom: 20px;
@@ -46,7 +41,6 @@
       max-width: 100%;
       height: auto;
     }
-    /* Stopka widoczna na każdej stronie */
     footer {
       position: fixed;
       bottom: 0;
@@ -62,7 +56,6 @@
 </head>
 <body>
 
-  <!-- Strona 1: Pytanie o walentynkę -->
   <div id="page1" class="page active">
     <h1>Czy zostaniesz moją walentynką kajeczko?</h1>
     <img src="https://cdn.pixabay.com/animation/2022/08/23/03/32/03-32-04-108_512.gif" alt="Walentynka GIF">
@@ -72,20 +65,16 @@
     </div>
   </div>
 
-  <!-- Strona 2: Pierwsza iteracja pytania "Czy aby na pewno??" -->
   <div id="page2" class="page">
     <h1>Czy aby na pewno??</h1>
-    <!-- Gif umieszczony między pytaniem a odpowiedziami -->
     <img src="https://cdn.pixabay.com/animation/2022/07/31/05/09/05-09-52-958_512.gif" alt="Gif między pytaniem a odpowiedzią">
     <div>
       <button onclick="goToPage(3)">Tak</button>
       <button onclick="goToPage(3)">Sí <span class="small-text">(tak)</span></button>
     </div>
-    <!-- Gif na dole, wyśrodkowany -->
     <img src="https://cdn.pixabay.com/animation/2024/03/17/13/31/13-31-09-736_512.gif" alt="Gif na dole" style="margin-top:20px;">
   </div>
 
-  <!-- Strona 3: Druga iteracja z dodatkowym "aby na pewno" oraz nowymi językami -->
   <div id="page3" class="page">
     <h1>
       Czy aby na pewno??<br>
@@ -99,7 +88,6 @@
     <img src="https://cdn.pixabay.com/animation/2024/03/17/13/31/13-31-09-736_512.gif" alt="Gif na dole" style="margin-top:20px;">
   </div>
 
-  <!-- Strona 4: Trzecia iteracja z kolejnym rozszerzeniem pytania -->
   <div id="page4" class="page">
     <h1>
       Czy aby na pewno??<br>
@@ -113,7 +101,6 @@
     <img src="https://cdn.pixabay.com/animation/2024/03/17/13/31/13-31-09-736_512.gif" alt="Gif na dole" style="margin-top:20px;">
   </div>
 
-  <!-- Strona 5: Końcowa – informacja o telefonie oraz przycisk "cofnij" -->
   <div id="page5" class="page">
     <h1>
       Proszę zadzwonić pod numer telefonu <br>
@@ -124,13 +111,11 @@
     <button class="back-button" onclick="goToPage(1)">cofnij</button>
   </div>
 
-  <!-- Stopka widoczna na każdej stronie -->
   <footer>
     developed by Wojtek Wota
   </footer>
 
   <script>
-    // Funkcja zmieniająca aktualnie wyświetlaną "stronę"
     function goToPage(pageNumber) {
       var pages = document.querySelectorAll('.page');
       pages.forEach(function(page) {
